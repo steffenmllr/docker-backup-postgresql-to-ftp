@@ -18,7 +18,7 @@ Model.new(:backup, ENV['BACKUP_NAME'].dup) do
   ##
   # SFTP (Secure File Transfer Protocol) [Storage]
   #
-  store_with FTP do |server|
+  store_with SFTP do |server|
     server.username   = ENV['FTP_USERNAME'].dup
     server.password   = ENV['FTP_PASSWORD'].dup
     server.ip         = ENV['FTP_IP'].dup
