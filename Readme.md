@@ -1,6 +1,7 @@
 ## docker-backup-postgresql-to-ftp
 
-    A docker image with the ruby backup gem that is used to backup a postgresql container, upload it to ftp and notify slack if it fails
+    A docker image with the ruby backup gem that is used to backup a postgresql container,
+    upload it to ftp and notify slack if it fails.
 
 ##### Usage
 
@@ -16,6 +17,8 @@ docker run --rm -i \
 -e BACKUP_NAME='My Awesome Backup'
 -e SLACK_URL='https://hooks.slack.com/services/XXXXXXXXXX' \
 --link NAME_DB_PGCONTAINER:db \
-steffenmllr/backup
+steffenmllr/docker-backup-postgresql-to-ftp
 ```
 
+##### Build
+https://hub.docker.com/r/steffenmllr/docker-backup-postgresql-to-ftp
