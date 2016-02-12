@@ -34,7 +34,7 @@ Model.new(:backup, ENV['BACKUP_NAME'].dup) do
 
   after do |exit_status|
     notifier = Slack::Notifier.new ENV['SLACK_URL'].dup
-    if exit_status != 0 or exit_status != 1
+    if exit_status != 0
       attachment = {
         fallback: "Backup Status FAILURE",
         text: "Backup for #{ENV['BACKUP_NAME'].dup} did not work!!",
